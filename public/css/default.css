@@ -14,3 +14,6 @@ hr { border: 0; border-top: 1px solid #E0E0E0; }
 .linkbutton:hover { color: #FFF; background-color: $color; text-decoration: none; }
 
 footer { color: #FFF; text-align: center; margin-top: 20px; }
+
+a:hover { color: #FFF; background-color: $color; text-decoration: none; }
+

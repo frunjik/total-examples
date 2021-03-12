@@ -1,7 +1,10 @@
 exports.install = function() {
 
+  // route to examples/index.html
+  ROUTE('GET /examples');
+  
 	// route /example_101 to views/examples/example_101.html, using views/layout.html as layout
-	ROUTE('GET /examples/example-101', 'example-101');
+  ROUTE('GET /examples/example-101', 'example-101');
 
 	// route /example_102 to method example_102
  	ROUTE('GET /examples/example-102', example_102);
@@ -19,7 +22,7 @@ function example_102() {
 	controller
 		.view(
 			'/examples/example-102', 					// views/examples/example-102.html
-			{data: 'hello from server'}					// accessable in view as @{model.data}
+			{data: 'hello from server'}				// accessable in view as @{model.data}
 		);
 }
 
