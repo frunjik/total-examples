@@ -31,7 +31,7 @@ function example_103() {
 
 	// show views/example_103.html, using views/layout-example.html as layout
 	controller
-		.layout('/layout-example')						// use layout views/layout-example
+		.layout('/layout-examples')						// use layout views/layout-example
 		.view(
 			'/examples/example-103' 					// views/examples/example-103.html
 		);
@@ -41,6 +41,6 @@ function example_n(id) {
 	const controller = this;
 
 	controller
-		.layout('/layout-example')						// use layout views/layout-example
+		.layout('/layout-examples')						// use layout views/layout-example
 		.view(`/examples/example-${id}`);
 }

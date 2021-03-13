@@ -1,36 +1,26 @@
-<div style="center">
-	<h1>Example 108 (https://componentator.com/components/j-serverlisting/)</h1>
+<h1>Example 108 (https://componentator.com/components/j-serverlisting/)</h1>
 
-	<div class="row">
-		<div class="col-sm-6">
-			<h2>With layout</h2>
-			<div data---="serverlisting__model__paginate:gotopage">
-				<script type="text/html">
-					<div class="col-xs-4">
-						<div>Item: {{ name }}</div>
-					</div>
-				</script>
-				<script type="text/html">
-					<div><b>Layout:</b></div>
-					<br />
-					<div class="row">{{ body | raw }}</div>
-				</script>
-			</div>
-			<br />
+<h2>Columns</h2>
+<div data---="serverlisting__model__paginate:gotopage">
+	<script type="text/html">
+		<div class="col-xs-4">
+			<div>Item: {{ name }}</div>
 		</div>
+	</script>
+	<script type="text/html">
+		<div><b>Layout:</b></div>
+		<br />
+		<div class="row">{{ body | raw }}</div>
+	</script>
+</div>
 
-		<div class="col-sm-6">
-			<h2>Without layout</h2>
-			<div data---="serverlisting__model__paginate:gotopage">
-				<script type="text/html">
-					<div>
-						<div>Item: {{ name }}</div>
-					</div>
-				</script>
-			</div>
-			<br />
+<h2>Rows</h2>
+<div data---="serverlisting__model__paginate:gotopage">
+	<script type="text/html">
+		<div>
+			<div>Item: {{ name }}</div>
 		</div>
-	</div>
+	</script>
 </div>
 
 <script>
