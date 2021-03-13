@@ -1,3 +1,7 @@
+# Temp
+tmp
+*.json
+
 # Logs
 logs
 *.log
