@@ -1,0 +1,22 @@
+<ui-plugin>
+
+    <header>
+		<label><i class="ti ti-dashboard"></i>@(Commondata)</label>
+		<nav class="toolbar">
+			<button><i class="ti ti-cog"></i>@(Commondata)</button>
+		</nav>
+	</header>
+
+    <div class="padding">
+        <ui-component name="objecttree" path="common"></ui-component>        
+	</div>
+</ui-plugin>
+
+<script>
+	PLUGIN(function(exports) {
+
+		exports.reload = function() {
+		};
+
+	});
+</script>

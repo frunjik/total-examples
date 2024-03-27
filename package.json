@@ -1,18 +1,19 @@
 {
-	"name": "totalproject",
-	"description": "Empty project",
-	"version": "1.0.0",
-	"main": "index.js",
-	"dependencies": {
-		"total4": "latest"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"empty",
-		"project"
-	],
-	"author": "Peter Širka",
-	"license": "MIT"
+  "name": "emptyproject",
+  "description": "Total.js empty project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "total4": "latest",
+    "total5": "^0.0.1-49"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "empty",
+    "project"
+  ],
+  "author": "Peter Širka",
+  "license": "MIT"
 }

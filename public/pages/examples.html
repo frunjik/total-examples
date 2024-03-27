@@ -1,0 +1,58 @@
+<ui-plugin>
+
+    <header>
+        <label><i class="ti ti-dashboard"></i>@(Examples)</label>
+        <nav class="toolbar">
+            <button><i class="ti ti-cog"></i>@(Options)</button>
+        </nav>
+    </header>
+
+    <div class="padding">
+
+        <ui-component name="listmenu" path="?.listmenu.selected" config="datasource:?.listmenu.datasource" class="listmenu">
+            <script type="text/html">
+                {{ if id && id !== '-' }}
+                    <a href="#">{{ name }}</a>
+                {{ else }}
+                    <hr />
+                {{ fi }}
+            </script>
+        </ui-component>
+
+    </div>
+</ui-plugin>
+
+<script>
+    PLUGIN(function (exports) {
+
+        exports.init = function () {
+
+            var listmenu = {};
+
+            // Default selected item
+            listmenu.selected = 4;
+
+            // Data-Source
+            listmenu.datasource = [];
+            listmenu.datasource.push({ id: 1, name: 'List Item 1' });
+            listmenu.datasource.push({ id: '-' });
+            listmenu.datasource.push({ id: 2, name: 'List Item 2' });
+            listmenu.datasource.push({ id: 3, name: 'List Item 3' });
+            listmenu.datasource.push({ id: 4, name: 'List Item 4' });
+            listmenu.datasource.push({ id: 5, name: 'List Item 5' });
+            listmenu.datasource.push({});
+            listmenu.datasource.push({ id: 6, name: 'List Item 6' });
+            listmenu.datasource.push({});
+            listmenu.datasource.push({ id: 7, name: 'List Item 7' });
+            listmenu.datasource.push({ id: 8, name: 'List Item 8' });
+            listmenu.datasource.push({ id: 9, name: 'List Item 9' });
+            listmenu.datasource.push({ id: 0, name: 'List Item 0' });
+
+            SET('?.listmenu', listmenu);
+        };
+
+        exports.reload = function () {
+        };
+
+    });
+</script>
