@@ -2,27 +2,17 @@
     .paper { height: 800px; max-width: 800px; width: 100%; margin: 30px auto; border: 2px solid #E0E0E0; padding: 20px 50px; border-radius: var(--radius); }
 </style>
 
-<ui-component name="LAZY menu"></ui-component>
-<ui-component name="LAZY directory"></ui-component>
-<ui-component name="LAZY colorpicker"></ui-component>
-<ui-component name="LAZY faicons"></ui-component>
-<ui-component name="LAZY fileuploader"></ui-component>
-<ui-component name="LAZY imageuploader"></ui-component>
-<ui-component name="directory" config="placeholder:Search widget"></ui-component>
-
 <div class="help center">Start writing with the <code>/</code> backslash character</div>
-<div class="paper" data-scope="paperdata">
+
+<ui-plugin class="paper">
     <ui-component name="paper" path="?.data" config="readonly:0;parent:auto;margin:80;command:?/command;upload:?/upload;change:?/change;format:?/format;icon:?/icon" class="padding hidden invisible"></ui-component>
-</div>
+</ui-plugin>
 
 <script>
 
-	var paperdata = {};
+	PLUGIN(function(exports) {
 
-	// JSON data:
-	paperdata.data = [{"id":"l8wsuldr","widget":"h1","config":{"html":"Paper example"}},{"id":"l8wsuo6j","widget":"html","config":{"html":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi sapiente, adipisci quaerat quos eaque, veniam eum. Magni totam hic asperiores."}},{"id":"l8wsuzva","widget":"ol","config":{"items":[{"id":"l8wsuzvd","name":"Oranges"},{"id":"l8wsv1ng","name":"Apples"},{"id":"l8wsv29x","name":"Bananas"}]}},{"id":"l8wsv6lu","widget":"hr","config":{}},{"id":"l8wsvajq","widget":"tasks","config":{"items":[{"id":"l8wsvajt","name":"Task 1","checked":false},{"id":"l8wsvd8d","name":"Task 2","checked":false},{"id":"l8wsve1q","name":"Task 3","checked":false}]}},{"id":"l8wsvhjj","widget":"notes","config":{"html":"Lorem ipsum dolor sit amet consectetur adipisicing, elit. Tenetur, fugiat laborum porro inventore labore quod nihil vitae voluptatibus vel. Consequuntur."}},{"id":"l8wt03v8","widget":"code","config":{"code":"function sum(a, b) {\n\treturn a + b;\n}\n"}}];
-
-	PLUGIN('paperdata', function(exports) {
+		// exports.set('data', [{"id":"l8wsuldr","widget":"h1","config":{"html":"Paper example"}},{"id":"l8wsuo6j","widget":"html","config":{"html":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi sapiente, adipisci quaerat quos eaque, veniam eum. Magni totam hic asperiores."}},{"id":"l8wsuzva","widget":"ol","config":{"items":[{"id":"l8wsuzvd","name":"Oranges"},{"id":"l8wsv1ng","name":"Apples"},{"id":"l8wsv29x","name":"Bananas"}]}},{"id":"l8wsv6lu","widget":"hr","config":{}},{"id":"l8wsvajq","widget":"tasks","config":{"items":[{"id":"l8wsvajt","name":"Task 1","checked":false},{"id":"l8wsvd8d","name":"Task 2","checked":false},{"id":"l8wsve1q","name":"Task 3","checked":false}]}},{"id":"l8wsvhjj","widget":"notes","config":{"html":"Lorem ipsum dolor sit amet consectetur adipisicing, elit. Tenetur, fugiat laborum porro inventore labore quod nihil vitae voluptatibus vel. Consequuntur."}},{"id":"l8wt03v8","widget":"code","config":{"code":"function sum(a, b) {\n\treturn a + b;\n}\n"}}]);
 
 		exports.upload = function(opt) {
 

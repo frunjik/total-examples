@@ -25,31 +25,28 @@
 <script>
     PLUGIN(function (exports) {
 
-        exports.init = function () {
+        var model = {};
 
-            var listmenu = {};
+        // Default selected item
+        model.selected = 4;
 
-            // Default selected item
-            listmenu.selected = 4;
+        // Data-Source
+        model.datasource = [];
+        model.datasource.push({ id: 1, name: 'List Item 1' });
+        model.datasource.push({ id: '-' });
+        model.datasource.push({ id: 2, name: 'List Item 2' });
+        model.datasource.push({ id: 3, name: 'List Item 3' });
+        model.datasource.push({ id: 4, name: 'List Item 4' });
+        model.datasource.push({ id: 5, name: 'List Item 5' });
+        model.datasource.push({});
+        model.datasource.push({ id: 6, name: 'List Item 6' });
+        model.datasource.push({});
+        model.datasource.push({ id: 7, name: 'List Item 7' });
+        model.datasource.push({ id: 8, name: 'List Item 8' });
+        model.datasource.push({ id: 9, name: 'List Item 9' });
+        model.datasource.push({ id: 0, name: 'List Item 0' });
 
-            // Data-Source
-            listmenu.datasource = [];
-            listmenu.datasource.push({ id: 1, name: 'List Item 1' });
-            listmenu.datasource.push({ id: '-' });
-            listmenu.datasource.push({ id: 2, name: 'List Item 2' });
-            listmenu.datasource.push({ id: 3, name: 'List Item 3' });
-            listmenu.datasource.push({ id: 4, name: 'List Item 4' });
-            listmenu.datasource.push({ id: 5, name: 'List Item 5' });
-            listmenu.datasource.push({});
-            listmenu.datasource.push({ id: 6, name: 'List Item 6' });
-            listmenu.datasource.push({});
-            listmenu.datasource.push({ id: 7, name: 'List Item 7' });
-            listmenu.datasource.push({ id: 8, name: 'List Item 8' });
-            listmenu.datasource.push({ id: 9, name: 'List Item 9' });
-            listmenu.datasource.push({ id: 0, name: 'List Item 0' });
-
-            SET('?.listmenu', listmenu);
-        };
+        exports.set('listmenu', model);
 
         exports.reload = function () {
         };
