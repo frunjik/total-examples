@@ -1,4 +1,4 @@
-# Total.js: Empty Project SPA
+# Learning Total.js: Empty Project SPA
 
 - [Documentation](https://docs.totaljs.com)
 - [Join Total.js Telegram](https://t.me/totaljs)
